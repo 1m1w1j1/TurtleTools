@@ -6,6 +6,9 @@ local current_fuel = turtle.getFuelLevel()
 local fuel_percent = (current_fuel / max_fuel) * 100
 local unit_id = os.getComputerID()
 local label_id = os.getComputerLabel()
+local left_hand = {}
+local right_hand = {}
+
 local left_hand = turtle.getEquippedLeft()
 local right_hand = turtle.getEquippedRight()
 local left_hand_name = left_hand[0]
