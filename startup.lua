@@ -3,16 +3,24 @@ term.setCursorPos(1,1)
 
 local max_fuel = turtle.getFuelLimit()
 local current_fuel = turtle.getFuelLevel()
-local fuel_percent = (current_fuel / max_fuel) * 100
+local fuel_percent = math.floor((current_fuel / max_fuel) * 100)
 local unit_id = os.getComputerID()
 local label_id = os.getComputerLabel()
 local left_hand = {}
 local right_hand = {}
 
-local left_hand = turtle.getEquippedLeft()
-local right_hand = turtle.getEquippedRight()
-local left_hand_name = left_hand[0]
-local right_hand_name = right_hand[0]
+local left_hand_data = turtle.getEquippedLeft()
+local right_hand_data = turtle.getEquippedRight()
+
+local left_hand_name = "Empty"
+if left_hand_data then
+    left_hand_name = left_hand_data.name -- Access the 'name' field
+end
+
+local right_hand_name = "Empty"
+if right_hand_data then
+    right_hand_name = right_hand_data.name -- Access the 'name' field
+end
 
 
 print("Turtle ID : "..unit_id)
