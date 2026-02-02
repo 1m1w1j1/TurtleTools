@@ -8,8 +8,8 @@ local unit_id = os.getComputerID()
 local label_id = os.getComputerLabel()
 local left_hand = turtle.getEquippedLeft()
 local right_hand = turtle.getEquippedRight()
-local left_hand_name, name = next(left_hand)
-local right_hand_name, name = next(right_hand)
+local left_hand_name = left_hand[0]
+local right_hand_name = right_hand[0]
 
 
 print("Turtle ID : "..unit_id)
