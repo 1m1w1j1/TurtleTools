@@ -14,12 +14,12 @@ local right_hand_data = turtle.getEquippedRight()
 
 local left_hand_name = "Empty"
 if left_hand_data then
-    left_hand_name = left_hand_data.name -- Access the 'name' field
+    left_hand_name = left_hand_data.name
 end
 
 local right_hand_name = "Empty"
 if right_hand_data then
-    right_hand_name = right_hand_data.name -- Access the 'name' field
+    right_hand_name = right_hand_data.name
 end
 
 
