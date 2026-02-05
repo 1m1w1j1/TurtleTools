@@ -6,8 +6,7 @@ local monitor = peripheral.find("monitor")
 while true do
     monitor.setCursorPos(1, 1)
     monitor.write()
-    time = textutils.formatTime(os.day())
-    monitor.write("Server alive for : "..time)
+    monitor.write("Server alive for : "..os.day())
     os.sleep(60)
     
 end
