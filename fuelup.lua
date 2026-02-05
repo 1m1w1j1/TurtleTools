@@ -14,3 +14,6 @@ while current_fuel < max_fuel do
     print("Fuel level is: "..current_fuel.."/"..max_fuel)
     
 end
+
+turtle.back()
+turtle.back()
