@@ -57,12 +57,11 @@ for farm_strip = 1, 10, 1 do
     else
         turtle.select(2)
     end
+    turtle.forward()
     turtle.digDown()
     turtle.placeDown()
-    turtle.forward()
 end
 end
-turtle.up()
 
 farmStrip()
 
