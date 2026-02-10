@@ -1,0 +1,50 @@
+term.clear()
+term.setCursorPos(1,1)
+
+local max_fuel = turtle.getFuelLimit()
+local current_fuel = turtle.getFuelLevel()
+local fuel_percent = math.floor((current_fuel / max_fuel) * 100)
+local unit_id = os.getComputerID()
+local label_id = os.getComputerLabel()
+local left_hand = {}
+local right_hand = {}
+
+local left_hand_data = turtle.getEquippedLeft()
+local right_hand_data = turtle.getEquippedRight()
+
+local left_hand_name = "Empty"
+if left_hand_data then
+    left_hand_name = left_hand_data.name
+end
+
+local right_hand_name = "Empty"
+if right_hand_data then
+    right_hand_name = right_hand_data.name
+end
+
+
+print("Turtle ID : "..unit_id)
+print("Turtle Label : "..label_id)
+print("Fuel Remaining: "..fuel_percent.."%")
+print("Left hand equipment is:  "..left_hand_name)
+print("Right hand equipment is: "..right_hand_name)
+print("I need 95 wheat seeds")
+print("That's one stack plus 31 in the firt and second slot")
+print("I farm a 10x10 area")
+
+if right_hand_name != "minecraft:diamond_hoe" and left_hand_name != "minecraft:diamond_hoe" then
+    print("I need a diamond hoe to farm")
+    break()
+end
+
+turtle.up()
+
+local block_below, block_data = turtle.inspectDown()
+    if block_below then
+        if block_data.name == "minecraft:wheat" then
+            turtle.digDown()
+            turtle.forward()
+        end
+    else
+        turtle.forward()
+    end
