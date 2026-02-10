@@ -128,5 +128,7 @@ turtle.turnRight()
 turtle.forward()
 turtle.turnRight()
 
-
-
+--Go to home position
+turtle.turnRight()
+turtle.forward(11)
+turtle.turnLeft()
