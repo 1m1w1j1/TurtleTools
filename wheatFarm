@@ -35,7 +35,7 @@ print("I farm a 10x10 area")
 if right_hand_name ~= "minecraft:diamond_hoe" and left_hand_name ~= "minecraft:diamond_hoe" then
     print("I need a diamond hoe to farm")
 end
-
+--[[
 turtle.up()
 
 local block_below, block_data = turtle.inspectDown()
@@ -48,4 +48,17 @@ local block_below, block_data = turtle.inspectDown()
         turtle.forward()
    end
 
-   
+]]
+
+turtle.up()
+
+for farm_strip = 1, 10, do
+    if turtle.getItemCount(1) > 0 then
+        turtle.select(1)
+    else
+        turtle.select(2)
+    end
+    turtle.digDown()
+    turtle.placeDown()
+    turtle.forward()
+end
