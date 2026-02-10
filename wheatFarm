@@ -52,7 +52,7 @@ local block_below, block_data = turtle.inspectDown()
 
 turtle.up()
 
-for farm_strip = 1, 10, do
+for farm_strip = 1, 10, 1 do
     if turtle.getItemCount(1) > 0 then
         turtle.select(1)
     else
