@@ -32,9 +32,8 @@ print("I need 95 wheat seeds")
 print("That's one stack plus 31 in the firt and second slot")
 print("I farm a 10x10 area")
 
-if right_hand_name != "minecraft:diamond_hoe" and left_hand_name != "minecraft:diamond_hoe" then
+if right_hand_name ~= "minecraft:diamond_hoe" and left_hand_name ~= "minecraft:diamond_hoe" then
     print("I need a diamond hoe to farm")
-    break()
 end
 
 turtle.up()
