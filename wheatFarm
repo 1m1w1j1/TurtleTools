@@ -28,25 +28,16 @@ print("Turtle Label : "..label_id)
 print("Fuel Remaining: "..fuel_percent.."%")
 print("Left hand equipment is:  "..left_hand_name)
 print("Right hand equipment is: "..right_hand_name)
-print("I need 95 wheat seeds")
-print("That's one stack plus 31 in the firt and second slot")
-print("I farm a 10x10 area")
+
 
 if right_hand_name ~= "minecraft:diamond_hoe" and left_hand_name ~= "minecraft:diamond_hoe" then
     print("I need a diamond hoe to farm")
 end
---[[ nvm, get it working first, then add error checking.
-turtle.up()
+--[[ TO DO:
 
-local block_below, block_data = turtle.inspectDown()
-    if block_below then
-        if block_data.name == "minecraft:wheat" then
-            turtle.digDown()
-            turtle.forward()
-        end
-    else
-        turtle.forward()
-   end
+    - Check for enough seeds in inventory. 
+    - accept input for variable crop farm sizes. 
+
 
 ]]
 function plantCrop()
@@ -130,5 +121,8 @@ turtle.turnRight()
 
 --Go to home position
 turtle.turnRight()
-turtle.forward(11)
+
+for i = 1,10 do
+    turtle.forward()
+end
 turtle.turnLeft()
