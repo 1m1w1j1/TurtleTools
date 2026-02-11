@@ -45,6 +45,17 @@ function plantCrop()
     turtle.placeDown()
 end
 
+function goLeft()
+    turtle.turnLeft()
+    turtle.forward()
+    turtle.turnLeft()
+end
+
+function goRight()
+    turtle.turnRight()
+    turtle.forward()
+    turtle.turnRight()
+end
 
 function farmStrip()
 for farm_strip = 1, 11, 1 do
@@ -60,64 +71,26 @@ end
 end
 
 farmStrip()
-
-turtle.turnLeft()
-turtle.forward()
-turtle.turnLeft()
-
+goLeft()
 farmStrip()
-
-turtle.turnRight()
-turtle.forward()
-turtle.turnRight()
-
+goRight()
 farmStrip()
-
-turtle.turnLeft()
-turtle.forward()
-turtle.turnLeft()
-
+goLeft()
 farmStrip()
-
-turtle.turnRight()
-turtle.forward()
-turtle.turnRight()
-
+goRight()
 farmStrip()
-
-turtle.turnLeft()
-turtle.forward()
-turtle.turnLeft()
-
+goLeft()
 farmStrip()
-
-turtle.turnRight()
-turtle.forward()
-turtle.turnRight()
-
+goRight()
 farmStrip()
-
-turtle.turnLeft()
-turtle.forward()
-turtle.turnLeft()
-
+goLeft()
 farmStrip()
-
-turtle.turnRight()
-turtle.forward()
-turtle.turnRight()
-
+goRight()
 farmStrip()
-
-turtle.turnLeft()
-turtle.forward()
-turtle.turnLeft()
-
+goLeft()
 farmStrip()
+goRight()
 
-turtle.turnRight()
-turtle.forward()
-turtle.turnRight()
 
 --Go to home position
 turtle.turnRight()
@@ -125,4 +98,5 @@ turtle.turnRight()
 for i = 1,10 do
     turtle.forward()
 end
+
 turtle.turnLeft()
