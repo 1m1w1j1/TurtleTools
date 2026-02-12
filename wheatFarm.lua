@@ -37,12 +37,19 @@ end
 
     - Check for enough seeds in inventory. 
     - accept input for variable crop farm sizes. 
+    - Check that the one of the equipped items is a diamond hoe.
+    - 
 
 
 ]]
 function plantCrop()
-    turtle.digDown()
-    turtle.placeDown()
+    local block_below, block_data = turtle.inspectDown()
+        if block_below and block_data.name == "minecraft:wheat" and block_data.age == "7" then
+            turtle.digDown()
+            turtle.placeDown()
+        else
+            print("Crop not ready")
+        end
 end
 
 function goLeft()
