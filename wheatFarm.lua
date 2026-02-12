@@ -44,7 +44,7 @@ end
 ]]
 function plantCrop()
     local block_below, block_data = turtle.inspectDown()
-        if block_below and block_data.name == "minecraft:wheat" and block_data.age == "7" then
+        if block_below and block_data.name == "minecraft:wheat" and block_data.state.age == "7" then
             turtle.digDown()
             turtle.placeDown()
         else
