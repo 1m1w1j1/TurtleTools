@@ -1,0 +1,38 @@
+--[[
+Quick and dirty way to craft pie crusts
+Barrel of wheat up top.
+Barrel of milk buckets below
+]]
+
+
+term.clear()
+term.setCursorPos(1,1)
+
+--get the bread
+function getBread()
+turtle.select(1)
+turtle.suckUp(1)
+turtle.select(3)
+turtle.suckUp(1)
+turtle.select(6)
+turtle.suckUp(1)
+end
+
+
+--get A milk bucket
+function getMilk()
+turtle.select(2)
+turtle.suckDown(1)
+end
+
+for i = 1,10 do
+    getBread()
+    getMilk()
+    turtle.craft()
+    turtle.select(16)
+    turtle.drop()
+    turtle.select(2)
+    turtle.drop()
+end
+
+
