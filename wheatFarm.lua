@@ -37,7 +37,7 @@ end
 
     - Check for enough seeds in inventory. 
     - accept input for variable crop farm sizes. 
-    - Check that the one of the equipped items is a diamond hoe.
+    - Check that one of the equipped items is a diamond hoe.
     - 
 
 
