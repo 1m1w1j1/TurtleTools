@@ -4,12 +4,15 @@ term.write("Kelp Farm")
 
 
 function gotoFarm()
-    turtle.up()
-    turtle.up()
+    turtle.back()
+    turtle.right()
+end
+
+function returnToHome()
     turtle.turnRight()
-    turtle.forward()
-    turtle.turnLeft()
-    turtle.forward()
+    for i = 1, 11 do
+        turtle.forward()
+    end
 end
 
 function harvestKelp()
