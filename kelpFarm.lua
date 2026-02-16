@@ -58,4 +58,4 @@ end
 -- Uncomment to go to farm first
 gotoFarm()
 harvestKelp()
-returnToHome
+returnToHome()
