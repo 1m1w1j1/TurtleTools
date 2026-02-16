@@ -5,7 +5,7 @@ term.write("Kelp Farm")
 
 function gotoFarm()
     turtle.back()
-    turtle.right()
+    turtle.turnRight()
 end
 
 function returnToHome()
