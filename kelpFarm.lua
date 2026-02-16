@@ -10,7 +10,7 @@ end
 
 function returnToHome()
     turtle.turnRight()
-    for i = 1, 11 do
+    for i = 1, 10 do
         turtle.forward()
     end
 end
