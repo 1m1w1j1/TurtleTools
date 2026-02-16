@@ -9,6 +9,7 @@ function gotoFarm()
     turtle.turnRight()
     turtle.forward()
     turtle.turnLeft()
+    turtle.forward()
 end
 
 function harvestKelp()
