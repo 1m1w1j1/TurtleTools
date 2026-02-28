@@ -1,0 +1,31 @@
+local canvas = peripheral.wrap("back").canvas()
+canvas.clear() -- Get rid of our previous clock
+
+local group = canvas.addGroup({ 0, 0 })
+
+-- Wrap the scanner peripheral
+local scanner = peripheral.find("plethora:module_scanner")
+
+rect.setSize(250, 30)
+rect.setAlpha(100)
+
+local text = canvas.addText({ x = 5, y = 5 }, "")
+text.setScale(3)
+
+
+-- Look, we add items to our group instead
+group.addRectangle(0, 0, 240, 30, 0xFF000064)
+
+local text = group.addText({ 5, 5 }, "")
+text.setScale(3)
+
+local x, y, dx, dy = 0, 0, 5, 5
+
+
+while true do
+    -- Scan area and loop through results
+    for _, block in pairs(scanner.scan()) do
+        text.setText(("Block: %s at %d%d%d"):format(block.name, block.x, block.y, block.z))
+    end
+    sleep(1)
+end
