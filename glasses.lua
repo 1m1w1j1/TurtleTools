@@ -18,6 +18,6 @@ height = height - 30
 
 while true do
   group.setPosition(x, y)
-  shell.run("oreScan.lua")
+  text.setText(shell.run("oreScan.lua"))
   sleep(20)
 end
