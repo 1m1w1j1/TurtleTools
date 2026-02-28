@@ -17,19 +17,7 @@ width = width - 240
 height = height - 30
 
 while true do
-  -- Bounce the group around the canvas
-  x = x + dx
-  if x < 0 then x, dx = 0, -dx end
-  if x > width then x, dx = width, -dx end
-
-  y = y + dy
-  if y < 0 then y, dy = 0, -dy end
-  if y > height then y, dy = height, -dy end
-
   group.setPosition(x, y)
-
-  -- And update the time
-  text.setText("Time is " .. textutils.formatTime(os.time()))
-
-  sleep(0.05)
+  shell.run("oreScan.lua")
+  sleep(20)
 end
