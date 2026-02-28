@@ -4,7 +4,7 @@ canvas.clear() -- Get rid of our previous clock
 local group = canvas.addGroup({ 0, 0 })
 
 -- Look, we add items to our group instead
-group.addRectangle(0, 0, 240, 30, 0xFF000064)
+group.addRectangle(0, 0, 240, 30,)
 
 local text = group.addText({ 5, 5 }, "")
 text.setScale(3)
