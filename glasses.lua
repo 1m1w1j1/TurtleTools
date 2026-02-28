@@ -4,7 +4,7 @@ canvas.clear() -- Get rid of our previous clock
 local group = canvas.addGroup({ 0, 0 })
 
 -- Look, we add items to our group instead
-group.addRectangle(0, 0, 240, 30)
+group.addRectangle(0, 0, 700, 30)
 
 local text = group.addText({ 5, 5 }, "")
 text.setScale(3)
@@ -13,7 +13,7 @@ local x, y, dx, dy = 0, 0, 5, 5
 
 -- Compute the dimensions we can move within
 local width, height = canvas.getSize()
-width = width - 240
+width = width - 700
 height = height - 30
 
 while true do

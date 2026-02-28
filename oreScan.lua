@@ -1,48 +1,24 @@
 local scanner = peripheral.wrap("back")
 
-local results = {}
+local target_ores = {
+    ["minecraft:coal_ore"] = true,
+    ["minecraft:iron_ore"] = true,
+    ["minecraft:gold_ore"] = true,
+    ["minecraft:diamond_ore"] = true,
+    ["minecraft:redstone_ore"] = true,
+    ["minecraft:lapis_ore"] = true,
+    ["minecraft:emerald_ore"] = true,
+    ["minecraft:nether_quartz_ore"] = true,
+    ["minecraft:nether_gold_ore"] = true,
+    ["minecraft:nether_ancient_debris"] = true
+}
+
 for _, block in pairs(scanner.scan()) do
-    if block.name == "minecraft:coal_ore" then
+    if target_ores[block.name] then
         local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
         print(entry)
-        table.insert(results, entry)
-    elseif block.name == "minecraft:iron_ore" then
-        local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
-        print(entry)
-        table.insert(results, entry)
-    elseif block.name == "minecraft:gold_ore" then
-        local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
-        print(entry)
-        table.insert(results, entry)
-    elseif block.name == "minecraft:diamond_ore" then
-        local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
-        print(entry)
-        table.insert(results, entry)
-    elseif block.name == "minecraft:redstone_ore" then
-        local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
-        print(entry)
-        table.insert(results, entry)
-    elseif block.name == "minecraft:lapis_ore" then
-        local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
-        print(entry)
-        table.insert(results, entry)
-    elseif block.name == "minecraft:emerald_ore" then
-        local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
-        print(entry)
-        table.insert(results, entry)
-    elseif block.name == "minecraft:nether_quartz_ore" then
-        local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
-        print(entry)
-        table.insert(results, entry)
-    elseif block.name == "minecraft:nether_gold_ore" then
-        local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
-        print(entry)
-        table.insert(results, entry)
-    elseif block.name == "minecraft:nether_ancient_debris" then
-        local entry = ("The block at %d, %d, %d is %s"):format(block.x, block.y, block.z, block.name)
-        print(entry)
-        table.insert(results, entry)
+        return entry
     end
 end
 
-return table.concat(results, "\n")
+return ""
