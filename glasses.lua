@@ -24,9 +24,11 @@ local x, y, dx, dy = 0, 0, 5, 5
 
 
 while true do
-    -- Scan area and loop through results
-    for _, block in pairs(scanner.scan()) do
-        text.setText(("Block: %s at %d%d%d"):format(block.name, block.x, block.y, block.z))
-    end
-    sleep(1)
+    local scanner_radius = 8
+    local scanner_width = scanner_radius * 2 + 1
+
+    local scanned = scanner.scan()
+    local function scanned_at(x, y, z)
+        return scanned[scanner_width ^ 2 * (x + scanner_radius) + scanner_width * (y + scanner_radius) + (z + scanner_radius) + 1]
+end
 end
