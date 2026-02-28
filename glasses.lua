@@ -4,7 +4,7 @@ canvas.clear() -- Get rid of our previous clock
 local group = canvas.addGroup({ 0, 0 })
 
 -- Look, we add items to our group instead
-group.addRectangle(0, 0, 240, 30,)
+group.addRectangle(0, 0, 240, 30)
 
 local text = group.addText({ 5, 5 }, "")
 text.setScale(3)
@@ -18,6 +18,7 @@ height = height - 30
 
 while true do
   group.setPosition(x, y)
-  text.setText(shell.run("oreScan.lua"))
+  local scanResult = dofile("oreScan.lua")
+  text.setText(scanResult ~= "" and scanResult or "No ores found!")
   sleep(20)
 end
