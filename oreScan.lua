@@ -10,7 +10,14 @@ local target_ores = {
     ["minecraft:emerald_ore"] = true,
     ["minecraft:nether_quartz_ore"] = true,
     ["minecraft:nether_gold_ore"] = true,
-    ["minecraft:nether_ancient_debris"] = true
+    ["minecraft:nether_ancient_debris"] = true,
+    ["minecraft:deepslate_coal_ore"] = true,
+    ["minecraft:deepslate_iron_ore"] = true,
+    ["minecraft:deepslate_gold_ore"] = true,
+    ["minecraft:deepslate_diamond_ore"] = true,
+    ["minecraft:deepslate_redstone_ore"] = true,
+    ["minecraft:deepslate_lapis_ore"] = true,
+    ["minecraft:deepslate_emerald_ore"] = true,
 }
 
 for _, block in pairs(scanner.scan()) do
