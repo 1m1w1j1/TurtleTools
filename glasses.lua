@@ -19,6 +19,11 @@ height = height - 30
 while true do
   group.setPosition(x, y)
   local scanResult = dofile("oreScan.lua")
-  text.setText(scanResult ~= "" and scanResult or "No ores found!")
+  if scanResult == "" then
+    scanResult = "No ores found!"
+  elseif #scanResult > 512 then
+    scanResult = scanResult:sub(1, 509) .. "..."
+  end
+  text.setText(scanResult)
   sleep(20)
 end
